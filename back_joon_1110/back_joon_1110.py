@@ -12,5 +12,4 @@ while True :
         break
     else :
         cnt = cnt + 1
-
 print(cnt)
