@@ -6,8 +6,8 @@ people = dict()
 
 for i in range(N) : 
     age , name = sys.stdin.readline().split(' ' )
-    name = name.split()
-    people[name[0]] = int(age)
+    name = name[0:-1]
+    people[name] = int(age)
 
 people = sorted(people.items(), key=operator.itemgetter(1))
 #people = sorted(people.items(), key=lambda t: t[1])
