@@ -1,16 +1,16 @@
 import sys
 
 N = int(sys.stdin.readline())
-people = dict()
+people = list()
 
 for i in range(N) : 
     age , name = sys.stdin.readline().split(' ' )
     name = name[0:-1]
-    people[name] = [int(age), i]
+    people.append([int(age), name , i])
 
-people = sorted(people.items(), key=lambda t: (t[1][0], t[1][1]) )
+people.sort(key=lambda x: (x[0], x[2]))
 for i in range(len(people)) :
-        print(people[i][1][0], people[i][0])
+        print(people[i][0], people[i][1])
 
 
 
