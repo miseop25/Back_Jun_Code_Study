@@ -1,4 +1,3 @@
-
 def sum_cal(prelist, afterlist) :
     ans_list = []
     num = len(prelist)
@@ -12,10 +11,8 @@ def sum_cal(prelist, afterlist) :
                 ans_list.append(first)
             else :
                 ans_list.append(second)
-                            
         if i == num-1 :
             ans_list.append(prelist[i] + afterlist[i+1])
-
     return ans_list
 
 N = int(input())
