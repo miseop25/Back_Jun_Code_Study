@@ -13,7 +13,7 @@ def solution(clothes):
             
     wear_list = list(wear.values())
     if len(wear_list) == 30 :
-        return 30
+        return len(clothes)
     if len(wear) != 1 :
         for i in range(1 ,len(wear_list)+1) :
             buf = list( combinations(wear_list, i))
