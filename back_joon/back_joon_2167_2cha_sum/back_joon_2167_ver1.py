@@ -6,9 +6,9 @@ N, M  = map(int, input().split(' '))
 
 num_list = []
 for _ in range(N) :
-    num_list.append(list(map(int, input().split(' '))))    
-k = int(input())
+    num_list.append(list(map(int, input().split(' '))))
 
+k = int(input())
 for _ in range(k) :
     i,j,x,y = map(int, input().split(' '))
     answer = 0
