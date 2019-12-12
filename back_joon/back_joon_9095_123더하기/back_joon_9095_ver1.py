@@ -3,6 +3,8 @@ def solution(num) :
         return 1
     elif num == 2 :
         return 2
+    elif num == 3 :
+        return 4
     answer = 0
     ans_list = []
     buf_list = []
