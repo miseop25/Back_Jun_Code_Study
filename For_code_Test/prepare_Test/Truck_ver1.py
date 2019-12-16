@@ -25,12 +25,6 @@ def solution(bridge_length, weight, truck_weights):
 
         except :
             pass
-
-
-
-
-        
-
     return answer
 
 print(solution(10,10,[1,1,1,1,1,1,1,1,1,1]))
