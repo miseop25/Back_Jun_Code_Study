@@ -1,6 +1,4 @@
 import collections
-
-
 koong = [1,2,4,8]
 deq_buf = collections.deque([1,2,4,8])
 
