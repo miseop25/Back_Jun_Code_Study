@@ -21,7 +21,6 @@ def soluction(st_fn,dp_fn) :
 N = int(input())
 dp = collections.deque([10,55])
 stack_list = collections.deque([9,8,7,6,5,4,3,2])
-buf_list = collections.deque()
 
 cnt = 2
 ans = 0
