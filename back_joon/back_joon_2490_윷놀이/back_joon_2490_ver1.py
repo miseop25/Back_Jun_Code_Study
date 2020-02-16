@@ -1,3 +1,8 @@
+import sys
+import tensorflow as tf
+
+print(sys.version)
+
 for _ in range(3) :
     num_list = list(map(int, input().split(' ')))
     answer_list = ['D', 'C','B','A','E']
