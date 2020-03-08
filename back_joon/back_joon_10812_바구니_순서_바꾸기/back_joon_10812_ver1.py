@@ -17,5 +17,3 @@ for _ in range(M) :
     num[i-1:j] = first
 
 print(" ".join(map(str, num)))
-print(num)
-
