@@ -2,9 +2,6 @@ import sys
 import bisect
 input = sys.stdin.readline
 
-
-
-
 def checkCard(card_list, num, N) :
     bin_index = bisect.bisect_right(card_list,num)
     if card_list[bin_index-1] == num :
