@@ -6,11 +6,6 @@ num_list = list(map(int, input().split(" ")))
 
 one_index = num_list.index(1) + 1
 ans_list = []
-
-
-
-
-
 if one_index > K :
     buf_index = one_index-1
     for i in range(one_index) :
