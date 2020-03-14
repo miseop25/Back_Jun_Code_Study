@@ -13,7 +13,6 @@ def solution(prices):
             else :
                 cnt += 1
         answer.append(cnt)
-
     return answer
 
 print(solution([1,2,3,2,3]))
