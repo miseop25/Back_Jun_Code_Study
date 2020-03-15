@@ -9,12 +9,10 @@ def find_array(N, K):
     for i in range(N-K+1) :
         num_list.append(i+1)
     for j in num_list :
-        cnt = 0
-        temp = N
+        cnt = 1
+        temp = N - j
         buf = []
         buf.append(j)
-        temp -= j
-        cnt += 1
         while cnt != K :
             if temp-j <0 :
                 
@@ -23,9 +21,7 @@ def find_array(N, K):
                 temp = temp -j
                 buf.append(temp)
                 cnt +=1
-
-
-
+        ans.append(buf)
     return ans
 
 
