@@ -23,7 +23,6 @@ if one_index > K :
         ans = af_value + bef_value
         ans_list.append(ans)
 
-
 else :
     value , temp = divmod(N, K-1)
     if temp != 0 :
