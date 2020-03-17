@@ -9,6 +9,5 @@ def solution(brown, red):
         total = (i[0]+2)*(i[1]+2)
         if (total - red) == brown :
             return [i[0]+2 , i[1]+2]
-    print(answer)
 
 print(solution(8,1))
