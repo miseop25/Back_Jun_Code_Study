@@ -11,7 +11,7 @@ def solution(jobs):
 
     while jobs :
         if not (working) :
-            for i in range(len(jobs)) :
+            for _ in range(len(jobs)) :
                 temp, buf = jobs.popleft()
                 if temp <= time :
                     ans_list.append(time - temp + buf)
