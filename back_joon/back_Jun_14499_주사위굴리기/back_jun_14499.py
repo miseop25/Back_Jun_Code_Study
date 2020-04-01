@@ -1,38 +1,32 @@
-
-map = []
+num_maps = []
 dices = [[-1,0,-1], [0,0,0], [-1,0,-1], [-1,0,-1]]
 di_x = 1
 di_y = 1
 buf = []
-N, M, x, y, K = (input().split(' '))
+N, M, x, y, K = map(int, input().split(' '))
 skip_buf = 1
 
-N = int(N)
-M = int(M)
-x = int(x)
-y = int(y)
-K = int(K)
+
 
 for i in range(N) :
-    map.append([])
-    buf = input().split(' ')
-    print(buf)
-    for k in range(M):
-        map[i].append(int(buf[k]))
+    buf = list(map(int, input().split(' ')))
+    num_maps.append(buf)
     buf =[]
+print(num_maps)
 
 def move_dices(where,di_x,di_y) :
     if where == 1 :
         if di_x == 1 and di_y !=2 :
             di_y += 1
         elif di_x == 1 and di_y ==2 :
-            di_y = 0
+            di_y = 1
+            di_x = 3
         else:
             di_x = 1
             di_y = 2
         
     elif where == 2 :
-        if di_x == 1 and di_y !=0 :
+        if di_x == 1 and di_y != 0  :
             di_y -= 1
         elif di_x == 1 and di_y ==0 :
             di_y = 2
@@ -48,7 +42,7 @@ def move_dices(where,di_x,di_y) :
             di_x = 0
             di_y = 1
     elif where == 4 :
-        if di_x != 3 and di_y ==1 :
+        if di_x != 3 and di_y == 1 :
             di_x += 1
         elif di_x == 3 and di_y ==1 :
             di_x = 0
@@ -58,7 +52,7 @@ def move_dices(where,di_x,di_y) :
 
     return di_x,di_y
 
-def move_map(move_to,x,y,skip_buf) :
+def move_num_maps(move_to,x,y,skip_buf) :
     if move_to == 1 :
         skip_buf = 1
         y +=1
@@ -88,12 +82,12 @@ def move_map(move_to,x,y,skip_buf) :
 buf = input().split(' ')
 for i in buf :
     a = int(i)
-    x, y, skip_buf =  move_map(a,x,y,skip_buf)
+    x, y, skip_buf =  move_num_maps(a,x,y,skip_buf)
 
     if skip_buf != -1 :
         di_x , di_y= move_dices(a,di_x,di_y)
-        if map[x][y] != 0 :
-            dices[di_x][di_y] = map[x][y]
+        if num_maps[x][y] != 0 :
+            dices[di_x][di_y] = num_maps[x][y]
             if di_x == 1 and di_y == 1 :
                 print(dices[3][1])
             elif di_x == 3 and di_y == 1 :
@@ -107,10 +101,10 @@ for i in buf :
             elif di_x == 1 and di_y == 2 :
                 print(dices[1][0])
             
-            map[x][y] = 0
+            num_maps[x][y] = 0
 
         else :
-            map[x][y] = dices[di_x][di_y]
+            num_maps[x][y] = dices[di_x][di_y]
             if di_x == 1 and di_y == 1 :
                 print(dices[3][1])
             elif di_x == 3 and di_y == 1 :
