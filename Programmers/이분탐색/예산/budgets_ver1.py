@@ -3,7 +3,7 @@ def solution(budgets, M):
     answer = 0
     if sum(budgets) <= M :
         return max(budgets)
-    val , num = divmod(M, len(budgets))
+    val  =  M // len(budgets)
     budgets = sorted(budgets)
     que = collections.deque(budgets)
     price = M
