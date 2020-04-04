@@ -7,14 +7,9 @@ def solution(w,h):
     if w == h :
         return w*h - w
     
-    if w < h :
-        x = w 
-        y = h
+    gcd_num = math.gcd(w,h)
+    if gcd_num == 1:
+        answer = w*h - (w + h - 1)
     else :
-        x = h
-        y = w 
-    val , leave = divmod(y, x)
-    if leave != 0 :
-        val += 1
-    answer = (w*h) - (val * x)
+        answer = w * h - (w + h - gcd_num)
     return answer
