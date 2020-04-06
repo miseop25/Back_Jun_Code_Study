@@ -24,6 +24,3 @@ for i in range(N):
         rate = rate[: -2]
     rate += "%."
     print("Efficiency ratio is", rate)
-
-    
-
