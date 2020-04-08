@@ -7,7 +7,6 @@ for i in range(int(N)) :
     move = str(input())
     x = []
     y = []
-
     if move == "R" :
         if king[0] != "H" :
             king[0] = chr(ord(king[0]) + 1)
@@ -48,6 +47,8 @@ for i in range(int(N)) :
             king[0] = chr(ord(king[0]) - 1)
             x.append(-1)
             y.append(-1)
+
+            
     #  킹이 돌의 위치로 가는 경우
     if king[0] == stone[0] and king[1] == stone[1] :
         if y :
