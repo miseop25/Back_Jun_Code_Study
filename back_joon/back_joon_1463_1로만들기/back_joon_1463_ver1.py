@@ -1,6 +1,8 @@
 def soluction(N) :
     answer = 0
     buf_list = [N]
+    if N == 1:
+        return 0
     check = [True for i in range(N+1)]
     while True :
         temp = []
