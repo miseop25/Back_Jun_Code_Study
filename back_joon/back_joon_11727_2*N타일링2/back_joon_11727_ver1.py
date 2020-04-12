@@ -1,14 +1,10 @@
-import collections
-
 def soluction(n) :
-    dp = collections.deque([1,3])
+    dp = [1,3]
     if n < 3 :
         return dp[n-1]
-    answer = 0
-    for _ in range(2, n) :
-        answer = dp.popleft()*2 + dp[0]
-        dp.append(answer)
-    return answer%10007
+    for i in range(2, n) :
+        dp.append(dp[i-1] + dp[i-2]*2)
+    return dp[-1]%10007
 
 n = int(input())
 print(soluction(n))
