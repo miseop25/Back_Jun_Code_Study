@@ -39,7 +39,6 @@ if root_list :
         ans = get_ans(buf, i)
         if ans != -1 :
             answer.append(ans)
-    print(answer)
     print(min(answer))
 else :
     print(1)
