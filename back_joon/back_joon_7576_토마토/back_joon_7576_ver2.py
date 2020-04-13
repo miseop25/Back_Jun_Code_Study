@@ -31,8 +31,7 @@ def check_tomato_BFS(tomato, M , N) :
     for c in tomato :
         if 0 in c :
             return -1
-        else :
-            return day
+    return day
 
 
 M ,N = map(int, input().split(" "))
