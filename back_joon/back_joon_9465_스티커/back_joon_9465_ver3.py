@@ -1,5 +1,4 @@
 import sys
-import copy
 input = sys.stdin.readline
 
 def soluction(sk, width) :
@@ -17,10 +16,6 @@ def soluction(sk, width) :
         dp[0][i] = sk[0][i] + max(dp[1][i-1], dp[1][i-2])
         dp[1][i] = sk[1][i] + max(dp[0][i-1], dp[0][i-2])
     return max(dp[1][width-1], dp[0][width -1])
-
-
-
-
 
 T = int(input())
 for _ in range(T) :
