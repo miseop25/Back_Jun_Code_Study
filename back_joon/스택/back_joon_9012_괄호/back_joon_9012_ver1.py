@@ -14,6 +14,7 @@ for _ in range(N) :
                 check = stack.pop()
             else : 
                 answer = False
+                break
     if stack or answer == False:
         print("NO")
     else :
