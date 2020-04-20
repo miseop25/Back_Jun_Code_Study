@@ -22,12 +22,10 @@ def soluction(command) :
             print(stack[-1])
         else :
             print(-1)
-
         
 
 N = int(input())
 stack = []
-
 for _ in range(N) :
     cmd = list(map(str, input().rstrip().split(" ")))
     soluction(cmd)
