@@ -16,10 +16,9 @@ for _ in range(t) :
     while num and answer :
         check = num.popleft()
         if num :
-            if check in num[0] :
-                answer = False
-                break
-
+            if len(check) <= len(num[0]) :
+                if check == num[0][: len(check)] :
+                    answer = False 
     if answer :
         print("YES")
     else :
