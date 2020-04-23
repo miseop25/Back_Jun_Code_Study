@@ -10,7 +10,6 @@ def solution(s):
         buf = ""
         i = w 
         while i < len(s) :
-
             #  i + w 가 문자열보다 길 경우 하나씩 넣어주는 작업 진행
             if i + w > len(s) :
                 buf += s[i]
