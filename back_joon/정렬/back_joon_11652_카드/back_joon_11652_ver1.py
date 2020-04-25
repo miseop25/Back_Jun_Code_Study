@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
 
-
 N = int(input())
 card = dict()
 for _ in range(N) :
@@ -11,5 +10,4 @@ for _ in range(N) :
     else :
         card[num] = 1
 answer = sorted(card.items(), key= lambda x: (-x[1], x[0]))
-print(answer)
 print(answer[0][0])
