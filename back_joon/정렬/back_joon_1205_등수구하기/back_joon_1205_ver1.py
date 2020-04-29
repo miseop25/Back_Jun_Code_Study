@@ -3,10 +3,13 @@ input = sys.stdin.readline
 
 N, s, p = map(int, input().split(" "))
 if N == 0 :
+    # 랭킹 리스트가 비어있는경우 
     score_list = []
 else :
     score_list = list(map(int, input().split(" ")))
+
 answer = [0, 0]
+#  answer[0] 은 등수, answer[1] 은 순번이다.
 if s in score_list :
     temp = score_list.index(s)
     answer[1] = temp + 1
