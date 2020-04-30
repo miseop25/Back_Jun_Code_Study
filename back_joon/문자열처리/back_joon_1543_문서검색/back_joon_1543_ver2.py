@@ -6,9 +6,7 @@ p = input().rstrip()
 
 p_len = len(p)
 ans_list = []
-if len(s) == 1 and p_len == 1:
-    if s == p :
-        ans_list.append(1)
+
 for j in range(p_len) :
     answer = 0
     i = j
