@@ -13,6 +13,5 @@ def soluction(n) :
                 answer += 1
     return answer
 
-
 N = int(input())
 print(soluction(N))
