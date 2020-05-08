@@ -24,12 +24,15 @@ def solution(str1, str2):
     B = makeSet(str2)
     interSet = 0
     unionSet = 0
+    #  합집합에서 사용할 키!
     union_keys = (set(list(A.keys()) + list(B.keys())))
+
     # 교집합의 수 구하기
     for i_key in A.keys() :
         if i_key in B :
             interSet += min(A[i_key], B[i_key])
     
+    # 합집합의 수 구하기
     for i_key in union_keys :
         if i_key in A and i_key in B:
             unionSet += max(A[i_key], B[i_key])
