@@ -13,10 +13,10 @@ def solution(N, stages):
             st_dict[s][1] += 1
             st_dict[s][0] += 1
     
+    #  실패율을 계산!! 
     for k, v in st_dict.items() :
         if v[0] == 0 :
             ans_dict[k] = 0
-
         else :
             ans_dict[k] = v[1]/v[0]
     
