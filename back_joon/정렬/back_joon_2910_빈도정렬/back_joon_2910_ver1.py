@@ -13,7 +13,6 @@ if __name__ == "__main__":
     
     result = sorted(num_dict.items(), key= lambda x: (-x[1][0], x[1][1] ))
     answer = []
-    print(result)
     for i in result :
         for j in range(i[1][0]) :
             answer.append(str(i[0]))
