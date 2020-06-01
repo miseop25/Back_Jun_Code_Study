@@ -11,7 +11,6 @@ if __name__ == "__main__":
         string += string[ : len(findStr)-1]
         
         for i in range(len(string) - f_len + 1) :
-            # print(string[i : f_len + i])
             if string[i : f_len + i] == findStr :
                 answer += 1
                 break
