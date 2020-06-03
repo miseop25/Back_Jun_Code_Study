@@ -21,10 +21,6 @@ def soluction(num) :
     return result
 
 
-
-
-
-
 if __name__ == "__main__":
     N = int(input())
     print(soluction(N))
