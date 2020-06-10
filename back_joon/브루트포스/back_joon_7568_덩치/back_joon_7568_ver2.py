@@ -32,4 +32,4 @@ if __name__ == "__main__":
     answer = []
     for i in range(N) :
         answer.append(str(student[i][1]))
-    print("".join(answer))
+    print(" ".join(answer))
