@@ -72,6 +72,5 @@ if __name__ == "__main__":
             if RG_BFS[x][y] != 1 :
                 rgAnswer += checkRGImage(x, y, rg)
     
-
     print(norAnswer, rgAnswer)
             
