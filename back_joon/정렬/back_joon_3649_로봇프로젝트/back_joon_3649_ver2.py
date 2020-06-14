@@ -1,19 +1,16 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(1000000)
-
 
 def soluction() :
-    isInput =  (input())
-    if isInput == '\n' :
+    isInput = input().rstrip()
+    if isInput == '' :
         return False
-    try :    
-        x = int(isInput) * 10000000
-        n = int(input())
-    except :
-        return False
+    x = int(isInput) * 10000000
+    n = int(input())
+        
 
     lego = dict()
+    answer = dict()
 
     for _ in range(n) :
         k = int(input())
@@ -23,7 +20,6 @@ def soluction() :
         else :
             lego[k][1] += 1
     
-    answer = dict()
     for k in lego.keys() :
         if lego[k][0] in lego :
             if k <= lego[k][0] :
@@ -35,7 +31,6 @@ def soluction() :
             if int(x/2) == k :
                 if lego[k][1] < 2 :
                     continue
-            
             answer[l1] = [l2 , abs(l1- l2)]
     
     if len(answer) == 0 :
