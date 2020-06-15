@@ -38,7 +38,7 @@ def soluction() :
                 isWorking = False
                 isInput = False
                 break
-
+            # node를 딕셔너리에 저장한다.
             if a in node_dict :
                 node_dict[a].child.append(b)
             else :
