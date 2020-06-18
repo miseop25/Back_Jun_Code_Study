@@ -2,6 +2,10 @@ import sys
 input = sys.stdin.readline
 
 def soluction() :
+    N , M = map(int, input().split(" "))
+    if N == 0 and M == 0 :
+        return False
+    
     
     return True
 
