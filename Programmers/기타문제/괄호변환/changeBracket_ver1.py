@@ -1,4 +1,6 @@
 def solution(p):
+    if p == "" :
+        return p
     answer = []
     left = []
     for i, var in enumerate(p) :
