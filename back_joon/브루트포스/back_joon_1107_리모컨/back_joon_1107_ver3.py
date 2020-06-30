@@ -15,8 +15,6 @@ def soluction(N, nDict) :
 
     
 
-
-
 if __name__ == "__main__":
     while True :
         N = int(input())
