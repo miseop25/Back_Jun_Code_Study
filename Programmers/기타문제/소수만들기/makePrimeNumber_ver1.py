@@ -14,6 +14,5 @@ def solution(nums):
         temp = sum(i)
         if prims[temp] :
             answer += 1
-    
 
     return answer
