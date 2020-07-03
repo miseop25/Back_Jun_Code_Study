@@ -14,7 +14,6 @@ def splitFile(f) :
         head = f[: i - len(number)]
     else :
         head = f[: -len(number)]
-
     return head.lower(), int(number)
 
 
