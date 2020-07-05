@@ -9,8 +9,6 @@ def solution(m, musicinfos):
     answer = ''
     ans_list = []
     m = stReplace(m)
-    l = len(m)
-
     for cnt, song in enumerate(musicinfos) :
         st, ed, title, melody = map(str, song.split(","))
         time = (int(ed[:2])-  int(st[:2]))*60 + (int(ed[3:]) - int(st[3:]))
