@@ -18,7 +18,27 @@ def find4Block(m, n ,board) :
                     x = i + dx[k]
                     y = j + dy[k]
                     delBlock.add((x, y))
-                    
+    return delBlock
+
+def blockDown(m,n, board) :
+    for i in range(m-1) :
+        for j in range(n) :
+            if board[i+1][j] == "X" and board[i][j] != "X":
+                temp = board[i][j]
+                board[i][j] = "X"
+                for k in range(i+1, m) :
+                    if board[k][j] != "X" :
+                        board[k-1][j] = temp
+                        break
+                    else :
+                        board[k][j] = "X"
+    return board
+    
+def delectBlock(d, board) :
+    for x, y in d :
+        board[x][y] = "X"
+    return board
+
 
 
 
@@ -28,5 +48,13 @@ def solution(m, n, board):
     game = []
     for i in board :
         game.append(list(i))
-    print(game)
+
+    delList = find4Block(m,n,game)
+    while delList :
+        game = delectBlock(delList, game)
+        game = blockDown(m,n, game)
+        delList = find4Block(m,n,game)
     return answer
+
+
+print(solution(6,6,["TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"] ))
