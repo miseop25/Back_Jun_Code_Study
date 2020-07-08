@@ -7,3 +7,4 @@ def solution(n) :
         dp.append((dp[i-2] + dp[i-1])%1000000007)
 
     return dp[i]
+    
