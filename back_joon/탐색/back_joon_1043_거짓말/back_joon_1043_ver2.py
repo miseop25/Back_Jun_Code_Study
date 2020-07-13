@@ -23,7 +23,6 @@ def soluction() :
             person[i].add(p)
             if i in rDict :
                 rDict[i][1].add(p)
-
         party.append([True, temp])
 
     flag = True 
