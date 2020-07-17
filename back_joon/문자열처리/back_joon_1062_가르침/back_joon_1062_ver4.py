@@ -2,7 +2,6 @@ import sys
 import itertools
 input = sys.stdin.readline
 
-
 def soluction() :
     N, K = map(int, input().split(" "))
     ansList = []
