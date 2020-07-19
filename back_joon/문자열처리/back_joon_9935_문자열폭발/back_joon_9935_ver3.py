@@ -8,7 +8,7 @@ def soluction():
         return word
     stack = []
 
-    for i , w in enumerate(word) :
+    for  w in word :
         if w == b[-1] :
             if len(stack) >= len(b)-1 :
                 flag = True
