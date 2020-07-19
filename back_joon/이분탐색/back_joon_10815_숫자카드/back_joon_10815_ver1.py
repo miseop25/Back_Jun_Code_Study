@@ -3,12 +3,12 @@ input = sys.stdin.readline
 
 def soluction():
     answer = []
-    N = int(input())
+    int(input())
     card = list(map(int, input().split(" ")))
     cDict = dict()
     for i in card :
         cDict[i] = True
-    M = int(input())
+    int(input())
     my = list(map(int, input().split(" ")))
     for i in my :
         if i in cDict :
