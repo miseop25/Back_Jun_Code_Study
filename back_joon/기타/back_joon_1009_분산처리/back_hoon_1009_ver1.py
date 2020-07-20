@@ -16,7 +16,6 @@ def soluction() :
     a, b = map(int, input().split(" "))
     k = int(str(a)[-1])
     v = b%(len(numDict[k])) - 1
-
     return numDict[k][v]
 
 
