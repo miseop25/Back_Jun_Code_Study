@@ -20,11 +20,14 @@ if __name__ == "__main__":
     answer = []
     answer.append(round(sums/N))
     answer.append(num[N//2])
+    
     if len(cnt) > 1 :
         if cnt[0][1] == cnt[1][1] :
             answer.append(cnt[1][0])
         else :
             answer.append(cnt[0][0])
+    else :
+        answer.append(cnt[0][0])
     
     if len(num) !=  1 :
         answer.append(num[-1] - num[0])
