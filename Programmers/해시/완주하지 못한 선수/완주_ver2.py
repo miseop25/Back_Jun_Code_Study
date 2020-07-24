@@ -1,12 +1,21 @@
 def solution(participant, completion):
-
-    s1 = set(participant)
-    s2 = set(completion)
-    answer = list(s1 -s2)
-    if answer :
-        return answer[0]
-    participant.sort()
-    completion.sort()
-    for i in range(len(participant)) :
-        if participant[i] != completion[i] :
-            return participant[i]
+    c1Dict = dict()
+    c2Dict = dict()
+    for i in completion :
+        if i in c1Dict :
+            c1Dict[i] += 1
+        else : 
+            c1Dict[i] = 1
+    
+    for i in participant :
+        if i not in c1Dict :
+            return i
+        if i in c2Dict :
+            c2Dict[i] += 1
+        else :
+            c2Dict[i] = 1
+    
+    for k, v in c1Dict.items() :
+        if v != c2Dict[k] :
+            return k
+        
