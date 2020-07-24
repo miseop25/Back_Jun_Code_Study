@@ -4,10 +4,10 @@ def solution(lines):
     times = []
 
     for i in lines :
-        d, t, w = i.split(" ")
+        _, t, w = i.split(" ")
         w = w[: -1]
         h, m, s = t.split(":")
-        st = int(((int(h)*360 + int(m)*60 ) + float(s))*1000)
+        st = int(((int(h)*3600 + int(m)*60 ) + float(s))*1000)
         ed = int((st + float(w))*1000)
         times.append([st, ed])
 
