@@ -1,6 +1,9 @@
 import sys
 from collections import deque
-input = sys.stdin.readline
+t = open("/Users/minseopkim/Documents/GitHub/Back_Jun_Code_Study/back_joon/기타/back_joon_5430_AC/I.in", 'r')
+r = open("/Users/minseopkim/Documents/GitHub/Back_Jun_Code_Study/back_joon/기타/back_joon_5430_AC/I.out", "r")
+
+input = t.readline
 
 def soluction() :
     cmd = input().rstrip()
@@ -38,8 +41,15 @@ def soluction() :
     return answer
 
 
-
 if __name__ == "__main__":
+    
     T = int(input())
-    for _ in  range(T) :
-        print(soluction())
+    for a in  range(T) :
+        comp = r.readline().rstrip()
+        answer = soluction()
+        if comp != answer :
+            print(a)
+            break
+
+    r.close()
+    t.close()
