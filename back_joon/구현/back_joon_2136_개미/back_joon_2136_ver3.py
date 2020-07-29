@@ -9,5 +9,5 @@ if __name__ == "__main__":
         buf = int(input())
         ant.append([buf, i])
     ant = sorted(ant, key= lambda x: abs(x[0]))
-
+        
 
