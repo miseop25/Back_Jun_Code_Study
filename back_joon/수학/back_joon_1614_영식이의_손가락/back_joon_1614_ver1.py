@@ -24,9 +24,6 @@ def soluction(n, cnt) :
                 answer += finger[n-1][1]
             else :
                 answer += finger[n-1][0]   
-
-
-
     return answer
 
 
