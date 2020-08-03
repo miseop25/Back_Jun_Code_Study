@@ -1,6 +1,6 @@
 class Solution:
     def __init__(self) :
-        self.dp = [1]
+        self.dp = [1,3,6]
 
     def updateDP(self, num: int) -> None :
         index = len(self.dp) + 1
@@ -10,9 +10,9 @@ class Solution:
 
 
     def arrangeCoins(self, n: int) -> int:
-        if self.dp[-1] < n :
+        if self.dp[-1] <= n :
             self.updateDP(n)
-            return len(self.dp)
+            return len(self.dp) - 1
         for i , val in enumerate(self.dp):
             if val > n :
                 return i
