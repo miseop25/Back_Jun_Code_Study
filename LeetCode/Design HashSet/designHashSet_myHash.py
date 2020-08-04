@@ -16,13 +16,13 @@ class MyHashSet:
     def contains(self, key: int) -> bool:
         return self.myDict[key]
 
-    
+
+
+
 """
 Returns true if this set contains the specified element
 """
         
-
-
 # Your MyHashSet object will be instantiated and called as such:
 # obj = MyHashSet()
 # obj.add(key)
