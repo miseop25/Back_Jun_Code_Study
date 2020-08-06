@@ -1,28 +1,32 @@
-import itertools
 class WordDictionary:
-    
-
     def __init__(self):
-        self.wordSet = set()
-        
+        self.wordDict = dict()        
 
     def addWord(self, word: str) -> None:
-        self.wordSet.add(word)
-        self.wordSet.add("."*len(word))
-        for i in range(len(word)) :
-            check = list(itertools.combinations([k for k in range(len(word))], i))
-            for j in check :
-                temp = list(word)
-                for k in j :
-                    temp[k] = "."
-                self.wordSet.add("".join(temp))
+        width = len(word)
+        if width in self.wordDict :
+            self.wordDict[width].append(word)
+        else :
+            self.wordDict[width] = [word]
 
-
-        
 
     def search(self, word: str) -> bool:
-        if word in self.wordSet :
-            return True
+
+        comp = []
+        for i, v in enumerate(word) :
+            if v != "." :
+                comp.append([i,v])
+        if len(word) in self.wordDict :
+            for i in self.wordDict[len(word)] :
+                flag = True
+                for j, v in comp :
+                    if v == i[j] :
+                        continue
+                    else :
+                        flag = False
+                        break
+                if flag :
+                    return True
         return False
         
 
