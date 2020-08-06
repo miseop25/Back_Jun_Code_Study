@@ -1,8 +1,8 @@
 import math
 class Solution:
     def isPowerOfFour(self, num: int) -> bool:
-        answer = math.log10(abs(num))/math.log10(4)
-
+        if num < 0 : return False
+        answer = math.log10(num)/math.log10(4)
         if int(answer) == answer :
             return True
         else :
