@@ -36,6 +36,6 @@ test = [["bad"],["dad"],["mad"],["pad"],["bad"]]
 obj = WordDictionary()
 for i in test : 
     obj.addWord(i[0])
-print(obj.wordSet)
+print(obj.wordDict)
 
 # param_2 = obj.search(word)
