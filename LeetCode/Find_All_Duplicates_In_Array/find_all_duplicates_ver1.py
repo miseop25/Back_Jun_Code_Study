@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
         if not nums :
@@ -18,3 +19,6 @@ class Solution:
             answer.append(comp)
         return answer
 
+
+a = Solution()
+print(a.findDuplicates([1,1,2]))
