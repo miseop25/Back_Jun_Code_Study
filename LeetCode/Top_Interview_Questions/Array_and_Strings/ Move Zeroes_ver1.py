@@ -5,7 +5,6 @@ class Solution:
         for _ in range(zero) :
             nums.remove(0)
             nums.append(0)
-        print(nums)
 
 
 a = Solution()
