@@ -12,7 +12,7 @@ if __name__ == "__main__":
     for i in range(1, N) :
         if comp <= score[i] + N :
             answer += 1
-            comp = max(comp, score[i]+i)
+            comp = max(comp, score[i]+i + 1)
         else :
             break
     print(answer)
