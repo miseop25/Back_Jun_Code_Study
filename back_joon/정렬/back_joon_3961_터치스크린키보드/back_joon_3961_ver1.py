@@ -20,7 +20,6 @@ class TouchScreen :
         x = abs(self.keyboard[a][0] - self.keyboard[b][0])
         y = abs(self.keyboard[a][1] - self.keyboard[b][1])
         return x + y
-
         
     def soluction(self) :
         word, case = map(str, input().split(" "))
@@ -34,9 +33,6 @@ class TouchScreen :
         result = sorted(result, key= lambda x: (x[1], x[0] )  )
         for w, count in result :
             print(w, count)
-            
-
-    
 
 
 if __name__ == "__main__":
