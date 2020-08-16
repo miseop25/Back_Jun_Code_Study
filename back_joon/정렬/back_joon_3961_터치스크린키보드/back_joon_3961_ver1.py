@@ -34,7 +34,6 @@ class TouchScreen :
         for w, count in result :
             print(w, count)
 
-
 if __name__ == "__main__":
     N = int(input())
     a = TouchScreen()
