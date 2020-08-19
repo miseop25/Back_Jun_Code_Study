@@ -10,7 +10,6 @@ def solution(n, k):
         answer.append(num.pop(int(v)))
         k = k - v*mid 
 
-
     return answer
 
 
