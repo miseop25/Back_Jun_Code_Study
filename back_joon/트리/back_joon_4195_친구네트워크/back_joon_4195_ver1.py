@@ -8,7 +8,6 @@ def soluction() :
     friendDict = dict()
 
     case = int(input())
-    for _ in range(case) :
 
 
 if __name__ == "__main__":
