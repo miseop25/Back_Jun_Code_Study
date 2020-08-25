@@ -5,3 +5,5 @@ if __name__ == "__main__":
         alpa[ord(i)- 97] = str(int(alpa[ord(i)- 97]) + 1)
     answer = " ".join(alpa)
     print(answer)
+
+    
