@@ -51,9 +51,6 @@ def makeBalanceWord(word) :
         result = temp + buf
     return result
 
-
-
-
 def solution(p):
     answer = ''
     answer = makeBalanceWord(p)
