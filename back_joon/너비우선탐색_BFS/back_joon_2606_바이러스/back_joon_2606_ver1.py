@@ -35,12 +35,3 @@ if __name__ == "__main__":
     a.inputNode(C)
     a.checkTree(1)
     a.printAnwer()
-
-
-
-
-
-
-
-
-
