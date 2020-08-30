@@ -11,9 +11,8 @@ def rotate90(array) :
             j += 1
     return result
 
-def makeCompArray(key, lock) :
+def makeCompArray(lock) :
     N = len(lock)
-    M = len(key)
     T = N*3
     result = [[0 for _ in range(T)] for _ in range(T)]
     for i in range(N,N+N) :
@@ -28,7 +27,7 @@ def unlock(key, comp, x, y) :
             result[i][j] += key[i-x][j-y]
     return result
 
-def checkIsUnlock(array, N, M) :
+def checkIsUnlock(array, N) :
     for i in range(N,N+N) :
         for j in range(N,N+N) :
             if array[i][j] != 1 :
@@ -38,12 +37,12 @@ def checkIsUnlock(array, N, M) :
 
 def solution(key, lock):
     answer = True
-    compArray = makeCompArray(key, lock)
+    compArray = makeCompArray(lock)
     for _ in range(4) :
         for i in range(len(lock) -len(key) + 1, len(lock)*2 + 1): 
             for j in range(len(lock) -len(key) + 1, len(lock)*2 + 1):
                 temp = unlock(key, compArray, i, j)
-                answer = checkIsUnlock(temp, len(lock), len(key))
+                answer = checkIsUnlock(temp, len(lock))
                 if answer :
                     return answer
         key = rotate90(key)
