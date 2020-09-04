@@ -17,7 +17,7 @@ if __name__ == "__main__":
         else : 
             heapq.heappush(maxHeap, (-num, num))
         
-        if len(maxHeap) > len(minHeap) + 2 :
+        if len(maxHeap) > len(minHeap) + 1 :
             temp = heapq.heappop(maxHeap)
             heapq.heappush(minHeap, temp[1])
         elif len(maxHeap) < len(minHeap) :
