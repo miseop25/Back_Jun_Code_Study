@@ -21,8 +21,6 @@ class FriendMoney :
             a, b = map(int, input().split(" "))
             self.friendDict[b].child.add(self.friendDict[a])
             self.friendDict[a].child.add(self.friendDict[b])
-
-
     
     def checkFriends(self,temp,value) :
         result = value
