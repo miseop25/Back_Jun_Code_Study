@@ -6,7 +6,7 @@
 
 ## 해결한 문제
 
-- 백준 : [203개](https://www.acmicpc.net/user/richard25)
+- 백준 : [205개의 문제 해결](https://www.acmicpc.net/user/richard25)
 
 - 프로그래머스 : 94개의 문제 해결
 
