@@ -3,7 +3,6 @@ def solution(arr1, arr2):
     y = len(arr1)
     x = len(arr2[0])
 
-
     for i in range(y) :
         answer.append([])
         for j in range(x) :
