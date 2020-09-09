@@ -1,4 +1,13 @@
+import copy
 def solution(tickets):
+    ticketsDict = dict()
+    for i in tickets :
+        temp = ''.join(i)
+        if temp in ticketsDict :
+            ticketsDict[temp] += 1
+        else :
+            ticketsDict[temp] = 1
+
     answer = []
     start_root = []
     for i in tickets :
@@ -7,13 +16,14 @@ def solution(tickets):
     
     for i in start_root :
         ans_buf = [i[0], i[1]]
-        stack = [i]
-        cnt = len(tickets) - 2
+        checkTicket = copy.deepcopy(ticketsDict)
+        cnt = 2
         while cnt < len(tickets) :
             for j in tickets :
                 if j[0] == ans_buf[-1] :
-                    if j not in stack :
-                        stack.append(j)
+                    temp = ''.join(j)
+                    if checkTicket[temp] > 0 :
+                        checkTicket[temp] -= 1
                         ans_buf.append(j[1])
             if len(ans_buf) == len(tickets) + 1 :
                 answer.append(ans_buf)
@@ -21,8 +31,7 @@ def solution(tickets):
     answer.sort()
     return answer[0]
 
-# def find_root() :
 
 
-# print(solution([["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL", "SFO"]]))
+print(solution([["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL", "SFO"]]))
 print(solution( [['ICN','A'],['ICN','A'],['A','ICN']]))
