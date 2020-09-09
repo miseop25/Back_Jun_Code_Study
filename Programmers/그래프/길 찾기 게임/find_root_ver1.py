@@ -26,13 +26,6 @@ def solution(nodeinfo):
         else :
             nodeDict[y] = deque([[x, Node(i, x)]])
     
-    t = sorted(nodeDict.items(), key= lambda x: -x[0])
-
-    alpa = deque(sorted(test[1], key= lambda x: x[0]))
-    while alpa :
-        a = alpa.popleft()
-        print(a)
-    
     return answer
 
 
