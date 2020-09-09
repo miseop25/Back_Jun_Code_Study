@@ -12,12 +12,6 @@ class Tree :
         self.nDict = nodeDict
 
 
-            
-        
-
-
-
-
 def solution(nodeinfo):
     answer = [[]]
     nodeDict = dict()
@@ -32,8 +26,8 @@ def solution(nodeinfo):
         else :
             nodeDict[y] = deque([[x, Node(i, x)]])
     
-    t = deque(sorted(nodeDict.items(), key= lambda x: -x[0]))
-    test = t[1]
+    t = sorted(nodeDict.items(), key= lambda x: -x[0])
+
     alpa = deque(sorted(test[1], key= lambda x: x[0]))
     while alpa :
         a = alpa.popleft()
