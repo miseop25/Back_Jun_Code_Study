@@ -4,11 +4,11 @@ def sum_cal(prelist, afterlist) :
     for i in range(num) :
         if i == 0 :
             ans_list.append(prelist[i] + afterlist[i])
-        elif i > 0  and i < num-1 :
+        if i > 0 :
             first = prelist[i-1] + afterlist[i]
             second = prelist[i] + afterlist[i]
             ans_list.append(max(first, second))
-        elif i == num-1 :
+        if i == num-1 :
             ans_list.append(prelist[i] + afterlist[i+1])
     return ans_list
 
