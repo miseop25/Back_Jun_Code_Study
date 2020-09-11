@@ -15,6 +15,7 @@ class Boggle :
         self.dy = [-1, 0, 1, -1, 1, -1, 0, 1]
         self.result = set()
 
+    # Trie 자료구조에 단어 삽입하기
     def makeTrie(self, temp) :
         if temp[0] in self.wordDict :
             pre = self.wordDict[temp[0]]
@@ -30,17 +31,20 @@ class Boggle :
             if i == len(temp)-1 :
                 pre.isEnd = True
     
+    # Trie 자료구조에 단어 삽입하기
     def wordInput(self) :
         for _ in range(self.N) :
             temp = input().rstrip()
             self.makeTrie(temp)
 
+    # 주어진 보드 입력받기
     def myBoard(self) :
         board = []
         for _ in range(4) :
             board.append(list(input().rstrip()))
         return board
     
+    # i, j 인덱스에서 단어 탐색하기
     def findWord(self, board, i,j, bfs, word, st) :
         word += board[i][j]
         if st.isEnd :
