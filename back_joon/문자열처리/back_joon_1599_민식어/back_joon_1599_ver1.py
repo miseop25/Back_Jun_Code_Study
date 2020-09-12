@@ -23,7 +23,6 @@ def soluction(array) :
     result = sorted(result.items(), key= lambda x : x[1])
     return result
 
-
 if __name__ == "__main__":
     array = []
     N = int(input())
