@@ -30,7 +30,6 @@ def soluction(N,M, vip) :
     return answer
 
 
-
 if __name__ == "__main__":
     N = int(input())
     M = int(input())
