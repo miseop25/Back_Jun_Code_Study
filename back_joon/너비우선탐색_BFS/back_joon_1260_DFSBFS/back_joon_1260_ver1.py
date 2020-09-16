@@ -9,7 +9,7 @@ class Node :
         self.data = data
         self.child = []
 
-class Soluction :
+class DfsAndBfs :
     def __init__(self, N, M, V) :
         self.N = N
         self.M = M
@@ -63,9 +63,6 @@ class Soluction :
                 target = self.nodeDict[stack.pop()]
         return result
 
-        
-        
-    
     def BFS(self, target) :
         que = deque([])
         que.append(target)
@@ -92,6 +89,6 @@ class Soluction :
 
 if __name__ == "__main__":
     N,M,V = map(int, input().split(" "))
-    t = Soluction(N, M, V)
+    t = DfsAndBfs(N, M, V)
     t.getAnswer()
     
