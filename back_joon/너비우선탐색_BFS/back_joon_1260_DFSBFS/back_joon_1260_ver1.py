@@ -1,5 +1,8 @@
 import sys
+from collections import deque
 input = sys.stdin.readline
+sys.setrecursionlimit(10**8)
+
 
 class Node :
     def __init__(self, data) :
@@ -20,14 +23,12 @@ class Soluction :
         
 
         self.nodeDict = dict()
+        for i in range(1, N +1 ) :
+            self.nodeDict[i] = Node(i)
     
     def inputNode(self) :
         for _ in range(self.M) :
             a,b = map(int, input().split(" "))
-            if a not in self.nodeDict :
-                self.nodeDict[a] = Node(a)
-            if b not in self.nodeDict :
-                self.nodeDict[b] = Node(b)
             self.nodeDict[a].child.append(b)
             self.nodeDict[b].child.append(a)
     
@@ -38,27 +39,52 @@ class Soluction :
         for i in target.child :
             if self.checkDFS[i] == 0 :
                 self.DFS(self.nodeDict[i])
+
+    def DFS_Use_Stack(self, target) :
+        stack = []
+        checkRoot = [0 for _ in range(self.N+1)]
+        result = []
+        stack.append(target.data) 
+        checkRoot[target.data] = 1
+        result.append(target.data)
+
+        while stack :
+            target.child = sorted(target.child)
+            flag = True
+            for i in target.child :
+                if checkRoot[i] == 0 :
+                    target = self.nodeDict[i]
+                    stack.append(target.data)
+                    result.append(i)
+                    checkRoot[i] = 1
+                    flag = False
+                    break
+            if flag :
+                target = self.nodeDict[stack.pop()]
+        return result
+
+        
+        
     
     def BFS(self, target) :
-        target.child = sorted(target.child)
-        temp = []
-        for i in target.child :
-            if self.checkBFS[i] == 0 :
-                self.checkBFS[i] = 1
-                self.reslutBFS.append(str(i))
-                temp.append(i)
-        for i in temp :
-            self.BFS(self.nodeDict[i])
+        que = deque([])
+        que.append(target)
+        self.checkBFS[target.data] = 1
+        while que :
+            n = que.popleft()
+            self.reslutBFS.append(str(n.data))
+            c = sorted(n.child)
+            for i in c :
+                if self.checkBFS[i] == 0 :
+                    que.append(self.nodeDict[i])
+                    self.checkBFS[i] = 1
     
     def getAnswer(self) :
         self.inputNode()
         self.DFS(self.nodeDict[self.V])
-
-        self.reslutBFS.append(str(self.nodeDict[self.V].data))
-        self.checkBFS[self.nodeDict[self.V].data] = 1
         self.BFS(self.nodeDict[self.V])
-
         print(' '.join(self.reslutDFS))
+        print("DFS_use_Stack : ", self.DFS_Use_Stack(self.nodeDict[self.V]))
         print(' '.join(self.reslutBFS))
 
 
@@ -66,7 +92,6 @@ class Soluction :
 
 if __name__ == "__main__":
     N,M,V = map(int, input().split(" "))
-
     t = Soluction(N, M, V)
     t.getAnswer()
     
