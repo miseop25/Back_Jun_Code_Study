@@ -29,7 +29,6 @@ class MakeBigger :
         target = self.start.child
         cnt = 0
         while cnt != self.K :
-
             if target.data > target.parant.data :
                 if target.parant.parant == None :
                     self.start = target
