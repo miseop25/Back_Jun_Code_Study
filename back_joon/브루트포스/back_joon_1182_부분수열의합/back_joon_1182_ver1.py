@@ -19,6 +19,3 @@ if __name__ == "__main__":
     for i in range(1, N+1) :
         answer += soluction(num, i, S)
     print(answer)
-
-
-
