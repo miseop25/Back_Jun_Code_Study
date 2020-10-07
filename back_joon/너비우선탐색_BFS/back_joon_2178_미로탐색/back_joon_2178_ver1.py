@@ -31,7 +31,7 @@ class Maze :
             if self.check[ni][nj] == -1 :
                 self.check[ni][nj] = self.check[i][j] + 1
                 self.DFS(ni,nj)
-            elif self.check[ni][nj] >= self.check[i][j] + 1 :
+            elif self.check[ni][nj] > self.check[i][j] + 1 :
                 self.check[ni][nj] = self.check[i][j] + 1
                 self.DFS(ni,nj)
         
@@ -50,7 +50,7 @@ class Maze :
                 if self.check[ni][nj] == -1 :
                     self.check[ni][nj] = self.check[i][j] + 1
                     que.append((ni,nj))
-                elif self.check[ni][nj] >= self.check[i][j] + 1 :
+                elif self.check[ni][nj] > self.check[i][j] + 1 :
                     self.check[ni][nj] = self.check[i][j] + 1
                     que.append((ni,nj))                
 
