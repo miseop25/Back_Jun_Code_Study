@@ -6,15 +6,13 @@ def solution(A, B):
     a = deque(A)
     while a :
         comp = a.popleft()
-        temp = deque(sorted(b, key=lambda x: x-comp if comp < x else x*1000000000 ))
-        if temp[0] > comp :
+        b = deque(sorted(b, key=lambda x: x if comp < x else (-x + 1000000000) ))
+        if b[0] > comp :
             answer += 1
-            result.append(temp.popleft())
+            result.append(b.popleft())
         else :
-            result.append(temp.pop())
-        b = list(temp)
-
-    
+            result.append(b.pop())
+       
 
     return answer
 
