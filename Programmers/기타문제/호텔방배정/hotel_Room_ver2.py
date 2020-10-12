@@ -26,7 +26,6 @@ def solution(k, room_number):
     result = []
     h = Hotel(room_number)
     result = h.getAnswer()
-
     return result
 
 print(solution(10**12, [1,1,1,1,1]))
