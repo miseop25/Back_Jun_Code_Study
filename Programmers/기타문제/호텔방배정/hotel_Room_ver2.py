@@ -1,3 +1,5 @@
+import sys
+sys.setrecursionlimit(10**9)
 class Hotel :
     def __init__(self, room_number) :
         self.room_number = room_number
@@ -11,7 +13,6 @@ class Hotel :
         else :
             newNum = self.findEmptyRoom(self.roomDict[num])
             self.roomDict[num] = newNum + 1
-
             return newNum
     
     def getAnswer(self) :
