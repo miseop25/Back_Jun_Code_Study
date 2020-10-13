@@ -44,8 +44,6 @@ class Track :
         return self.check[-1][-1]
 
 
-
-
 def solution(board):
     answer = 0
     t = Track(board)
