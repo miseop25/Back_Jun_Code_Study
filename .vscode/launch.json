@@ -5,6 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Back_Jun_Code_Study_d0ad2285"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": ""
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
