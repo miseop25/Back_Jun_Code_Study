@@ -1,20 +1,14 @@
 if __name__ == "__main__":
-    N = int(input())
-    total = len(str(N))
+    N = (input())
     cnt = 0
-    while total >1  :
+    while int(N) > 9  :
         temp = 0
-        check = 1
-        total = 0
-        for i in str(N) :
+        for i in N :
             temp += int(i)
-            if temp >= check :
-                total += 1
-                check *= 10
-        N = temp
+        N = str(temp)
         cnt += 1
     
-    if N%3 == 0 :
+    if int(N)%3 == 0 :
         answer = "YES"
     else :
         answer = "NO"
