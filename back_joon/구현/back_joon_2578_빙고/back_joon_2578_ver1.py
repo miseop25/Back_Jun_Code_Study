@@ -23,7 +23,6 @@ class Soluction :
         for i in range(5) :
             if sum(self.board[i]) == 5 :
                 cnt += 1
-        
         # 세로줄 확인하기
         for j in range(5) :
             temp = 0
