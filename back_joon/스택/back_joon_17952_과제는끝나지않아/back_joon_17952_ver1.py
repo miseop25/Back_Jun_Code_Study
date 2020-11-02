@@ -1,5 +1,7 @@
 import sys
+sys.setrecursionlimit(10**9)
 input = sys.stdin.readline
+
 
 class HomeWork :
     def __init__(self, score, time):
@@ -19,15 +21,15 @@ class Soluction :
             if cmd[0] == 1 :
                 self.stack.append(HomeWork(cmd[1], cmd[2]-1))
                 self.target = self.stack[-1]
-            else :
-                if self.target == None :
-                    continue
-                self.target.time -= 1 
+            elif cmd[0] == 0 :
+                if self.target != None :
+                    self.target.time -= 1 
+
             if self.target == None :
                 continue
-            if self.target.time == 0 :
+            elif self.target.time <= 0 :
                 self.answer += self.target.score
-                self.stack.pop()
+                if self.stack : self.stack.pop()
                 if self.stack :
                     self.target = self.stack.pop()
                 else :
