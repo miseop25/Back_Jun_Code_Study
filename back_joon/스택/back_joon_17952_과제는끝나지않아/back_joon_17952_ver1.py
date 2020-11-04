@@ -27,6 +27,7 @@ class Soluction :
 
             if self.target == None :
                 continue
+            
             elif self.target.time == 0 :
                 self.answer += self.target.score
                 if self.stack : self.stack.pop()
