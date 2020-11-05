@@ -19,7 +19,7 @@ class Soluction :
     
     def printAnswer(self) :
         print(self.cnt)
-        if self.answer%3 == 0:
+        if self.answer%3 == 0 :
             print("YES")
         else :
             print("NO")
