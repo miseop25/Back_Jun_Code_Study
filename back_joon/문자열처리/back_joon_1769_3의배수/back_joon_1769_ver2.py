@@ -16,7 +16,7 @@ class Soluction :
             for i in str(num) :
                 temp += int(i)
             return self.changeNum(temp)
-    
+
     def printAnswer(self) :
         print(self.cnt)
         if self.answer%3 == 0 :
