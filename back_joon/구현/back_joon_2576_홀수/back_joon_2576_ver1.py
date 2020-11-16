@@ -6,7 +6,6 @@ if __name__ == "__main__":
         if temp%2 == 1 :
             oddTotal += temp
             numOdd.append(temp)
-
             
     if numOdd :
         print(oddTotal)
