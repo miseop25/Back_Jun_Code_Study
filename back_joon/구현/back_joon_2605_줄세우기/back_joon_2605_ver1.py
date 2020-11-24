@@ -7,6 +7,7 @@ if __name__ == "__main__":
     stack_A = []
     stack_B = []
     data = 1
+    
     for i in num :
         for _ in range(i) :
             stack_B.append(stack_A.pop())
