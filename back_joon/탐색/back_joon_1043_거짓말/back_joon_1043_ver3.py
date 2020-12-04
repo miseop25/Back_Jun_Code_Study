@@ -51,8 +51,6 @@ class Soluction :
                 answer += 1
         return answer
 
-
-
 if __name__ == "__main__":
     N, M = map(int, input().split(" "))
     s = Soluction(N,M)
