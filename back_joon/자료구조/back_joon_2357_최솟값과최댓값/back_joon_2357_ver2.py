@@ -4,7 +4,6 @@ input = sys.stdin.readline
 class Soluction :
     def __init__(self, N,M) :
         self.M = M
-
         self.num = []
         self.inputNum(N)
 
