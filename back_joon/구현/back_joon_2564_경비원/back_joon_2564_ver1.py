@@ -16,7 +16,6 @@ def checkAB(i,j) :
         b = j
     return a,b
 
-
 if __name__ == "__main__":
     X, Y = map(int, input().split(" "))
     p = int(input())
