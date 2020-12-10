@@ -10,6 +10,7 @@ class Soluction :
             if num%i == 0 :
                 self.divisorNum.add(i)
                 self.divisorNum.add(num//i)
+                
         self.divisorNum = sorted(self.divisorNum)
     
     def getAnswer(self) :
