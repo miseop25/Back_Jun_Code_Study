@@ -25,7 +25,11 @@ func bubbleSort(arr: Array<Int>) -> Array<Int> {
     return temp
 }
 
-var arr =  readLine()!.components(separatedBy: " ").map({ (value) in Int(value)! })
-let answer = bubbleSort(arr: arr)
+//var arr =  readLine()!.components(separatedBy: " ").map({ (value) in Int(value)! })
+//let answer = bubbleSort(arr: arr)
 
+let s = BackJoon17219()
+s.firstInput()
+s.inputWebPassword()
+s.getAnswer()
 
