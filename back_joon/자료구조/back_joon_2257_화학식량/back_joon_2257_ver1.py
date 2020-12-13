@@ -6,7 +6,6 @@ class Soluction :
         self.word = word
 
         self.stack = []
-        self.stackCnt = 0
         self.total = []
 
         self.chemDict = {"H":1, "C": 12, "O":16}
