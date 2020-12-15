@@ -21,6 +21,7 @@ class Soluction :
                     self.stack[-1].append(sum(temp))
                 else : 
                     self.total.append(sum(temp))
+                    
                 continue
             
             try:
