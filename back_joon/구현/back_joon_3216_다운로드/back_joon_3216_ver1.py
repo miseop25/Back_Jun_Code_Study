@@ -21,12 +21,11 @@ class Soluction :
     
     def getAnswer(self) :
         for play, down in self.song :
-
-
             if (self.preDownTime + self.prePlayTime) > self.nextDownTime :
                 return self.preDownTime + 1
             elif (self.preDownTime + self.prePlayTime) == self.nextDownTime :
                 return self.preDownTime - 1
+                
             self.prePlayTime += play
             self.preDownTime += down
             self.nextPlayTime -= play
