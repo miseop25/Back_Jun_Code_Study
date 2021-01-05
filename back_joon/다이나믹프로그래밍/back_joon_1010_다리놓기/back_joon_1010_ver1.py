@@ -2,6 +2,7 @@ import sys
 input = sys.stdin.readline
 
 def get_aCb(a: int, b: int) :
+    
     left = a
     right = b
     for i in range(1, b) :
