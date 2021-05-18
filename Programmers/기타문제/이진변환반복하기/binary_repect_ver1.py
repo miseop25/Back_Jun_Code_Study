@@ -18,7 +18,6 @@ class Soluction :
         return [self.count, self.zeroCnt]
 
 
-
 def solution(s):
     answer = []
     s = Soluction(s)
