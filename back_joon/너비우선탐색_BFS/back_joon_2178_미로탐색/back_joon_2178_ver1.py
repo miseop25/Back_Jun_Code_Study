@@ -27,7 +27,7 @@ class Maze :
             if not self.isCorrectIndex(ni,nj) :
                 continue
             if self.board[ni][nj] == 0 :
-                continue
+                continueq
             if self.check[ni][nj] == -1 :
                 self.check[ni][nj] = self.check[i][j] + 1
                 self.DFS(ni,nj)
