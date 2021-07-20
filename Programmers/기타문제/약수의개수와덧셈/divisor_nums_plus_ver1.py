@@ -29,3 +29,8 @@ def solution(left, right):
     d = Divisor(left,right)
     answer = d.getAnswer()
     return answer
+
+
+a = int(input())
+b = int(input())
+print(solution(a,b))
