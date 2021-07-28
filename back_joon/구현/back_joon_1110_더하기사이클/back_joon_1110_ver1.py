@@ -32,7 +32,7 @@ class PlusCycle :
                 return self.cnt
 
 
-p = PlusCycle(1)
+p = PlusCycle(int(input().rstrip()))
 print(p.getAnswer())
         
 
