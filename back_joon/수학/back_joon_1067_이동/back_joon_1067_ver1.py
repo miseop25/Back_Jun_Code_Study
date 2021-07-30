@@ -15,6 +15,7 @@ if __name__ == "__main__":
         if y[0] != m2 :
             buf = y.popleft()
             y.append(buf)
+            
     answer = 0
     for i in range(N) :
         answer += x[i]*y[i]
