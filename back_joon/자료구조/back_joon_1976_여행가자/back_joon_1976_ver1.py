@@ -45,7 +45,6 @@ class Trip :
         else :
             return "YES"
 
-
 if __name__ == "__main__" :
     t = Trip()
     t.getInput()
