@@ -1,6 +1,5 @@
 def solution(gems):
     answer = []
-
     setGems = set(gems)
     g_len = len(setGems)
     myGems = dict()
