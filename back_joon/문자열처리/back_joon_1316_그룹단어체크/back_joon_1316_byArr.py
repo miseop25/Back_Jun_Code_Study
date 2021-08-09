@@ -13,7 +13,6 @@ def GroupWordCheck(word) -> bool :
                 alpa[ordAlpa] = i # 다시 해당 알파벳의 인덱스는 현재 인덱스로 최신화 
             else :
                 return False #알파벡 인덱스가 이미 -1 이 아닌데 연속되지 않는다는건 이미 이전에 한번 나왔다는 소리!
-    
     return True 
 
 if __name__ == "__main__" :
