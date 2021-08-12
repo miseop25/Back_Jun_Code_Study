@@ -51,8 +51,6 @@ class ScocreBoard :
                 scArr.append(self.scores[j][i])
             score = self.getAverge(scArr, i) 
             self.answer += self.getGrade(score)
-
-
         return self.answer      
 
 def solution(scores):
