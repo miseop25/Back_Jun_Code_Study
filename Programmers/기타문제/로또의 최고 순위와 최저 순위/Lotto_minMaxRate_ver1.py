@@ -18,8 +18,6 @@ class Lotto :
             self.answer[1] = 6
 
 
-
-
 def solution(lottos, win_nums):
     answer = []
     l = Lotto(lottos,win_nums)
