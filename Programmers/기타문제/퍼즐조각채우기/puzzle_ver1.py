@@ -66,8 +66,7 @@ class PuzzleGame :
     def getAnswer(self) :
         self.getBoardPiece()
         self.getTablePiece()
-        print(self.gmaeDict)
-        print(self.tableDict)
+
 
 
 def solution(game_board, table):
