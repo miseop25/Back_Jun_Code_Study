@@ -79,12 +79,9 @@ class PuzzleGame :
     def rotate90(self, arr) :
         retsut = []
         for x ,y in arr :
-            if y == 0  :
-                retsut.append((y, self.N-1 -y - x))
-            elif x == 0 : 
-                retsut.append((y, self.N -1 ))
-            else :
-                retsut.append((y, self.N-1 - y))
+            nx = y + self.N -1
+            ny = -x + self.N -1
+            retsut.append((nx,ny))
         return self.moveToZero(retsut)
 
         
@@ -115,8 +112,9 @@ class PuzzleGame :
                             break
                         else :
                             target = self.rotate90(target)
-
-        
+                    if bf :
+                        self.tableDict[k].remove(tp)
+                        break
         return self.answer
                     
             
