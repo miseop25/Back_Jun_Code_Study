@@ -49,8 +49,8 @@ class PuzzleGame :
                 arr = self.findPiece(1, self.table, i,j, self.tableVisted)
                 newPiece = PieceInfo(len(arr), arr)
                 if len(arr) not in self.tableDict: 
-                    self.tableDict[len(arr)] = set()
-                self.tableDict[len(arr)].add(newPiece)
+                    self.tableDict[len(arr)] = deque([])
+                self.tableDict[len(arr)].append(newPiece)
     
     def getBoardPiece(self) :
         for i in range(self.N) :
@@ -60,19 +60,71 @@ class PuzzleGame :
                 arr = self.findPiece(0, self.gameBoard, i,j, self.gameVisted)
                 newPiece = PieceInfo(len(arr), arr)
                 if len(arr) not in self.gmaeDict: 
-                    self.gmaeDict[len(arr)] = set()
-                self.gmaeDict[len(arr)].add(newPiece)
+                    self.gmaeDict[len(arr)] = deque([])
+                self.gmaeDict[len(arr)].append(newPiece)
+    
+    def moveToZero(self, arr) :
+        result = []
+        leftArr = sorted(arr, key = lambda x : x[0])
+        topArr = sorted(arr, key = lambda x: x[1])
+
+        left = leftArr[0][0]
+        top = topArr[0][1]
+
+        for x,y in arr :
+            result.append((x-left, y - top))
+        
+        return sorted(result)
+
+    def rotate90(self, arr) :
+        retsut = []
+        for x ,y in arr :
+            if y == 0  :
+                retsut.append((y, self.N-1 -y - x))
+            elif x == 0 : 
+                retsut.append((y, self.N -1 ))
+            else :
+                retsut.append((y, self.N-1 - y))
+        return self.moveToZero(retsut)
+
+        
 
     def getAnswer(self) :
         self.getBoardPiece()
-        self.getTablePiece()
+        self.getTablePiece()  
+        for k in self.gmaeDict.keys() :
+            if k not in self.tableDict :
+                continue
+            if k == 2 : 
+                self.answer += min(len(self.gmaeDict[k]), len(self.tableDict[k]))*2
+                continue
+            elif k == 1 :
+                self.answer += min(len(self.gmaeDict[k]), len(self.tableDict[k]))
+                continue
 
+            while self.gmaeDict[k] :
+                piece = self.gmaeDict[k].pop()
+                piece.loca = self.moveToZero(piece.loca)
+                bf = False
+                for tp in self.tableDict[k] :
+                    target = self.moveToZero(tp.loca)
+                    for _ in range(4) : 
+                        if target == piece.loca :
+                            self.answer += k
+                            bf = True
+                            break
+                        else :
+                            target = self.rotate90(target)
 
+        
+        return self.answer
+                    
+            
 
 def solution(game_board, table):
     answer = -1
-    g = PuzzleGame(gameBoard, table)
-    g.getAnswer()
+    g = PuzzleGame(game_board, table)
+    answer = g.getAnswer()
     return answer
 
 
