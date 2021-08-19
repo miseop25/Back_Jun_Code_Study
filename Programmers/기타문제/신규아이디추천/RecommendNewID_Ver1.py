@@ -1,6 +1,6 @@
 def applyAllowWord(word) :
     result = ''
-    allowWord = 'abcdefghizjlmnopqrstuvwxyz0123456789-_.'
+    allowWord = 'abcdefghizkjlmnopqrstuvwxyz0123456789-_.'
     alSet = set(list(allowWord))
     for c in word :
         if c in alSet :
@@ -21,7 +21,8 @@ def solution(new_id):
     new_id = new_id.strip(".")
     if new_id == '' :
         new_id = 'a'
-    if len(new_id) >= 15 :
+    
+    if len(new_id) >= 16 :
         new_id = new_id[ :15]
         new_id = new_id.strip(".")
     if len(new_id) <= 2 :
