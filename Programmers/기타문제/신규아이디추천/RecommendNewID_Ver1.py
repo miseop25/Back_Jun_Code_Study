@@ -31,5 +31,4 @@ def solution(new_id):
     answer = new_id
     return answer
 
-
 print(solution("abcdefghijklmn.p"))
