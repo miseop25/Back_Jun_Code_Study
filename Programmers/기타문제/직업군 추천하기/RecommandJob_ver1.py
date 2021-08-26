@@ -32,6 +32,7 @@ class JobCosulting :
         self.answer = result[0][0]
         return self.answer
 
+
 def solution(table, languages, preference):
     answer = ''
     jc = JobCosulting(table,languages,preference)
