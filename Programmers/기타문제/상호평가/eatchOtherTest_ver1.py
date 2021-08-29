@@ -53,6 +53,7 @@ class ScocreBoard :
             self.answer += self.getGrade(score)
         return self.answer      
 
+
 def solution(scores):
     answer = ''
     s = ScocreBoard(scores)
