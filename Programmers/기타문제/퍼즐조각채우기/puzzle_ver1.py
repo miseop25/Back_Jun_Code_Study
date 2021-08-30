@@ -70,7 +70,6 @@ class PuzzleGame :
 
         left = leftArr[0][0]
         top = topArr[0][1]
-
         for x,y in arr :
             result.append((x-left, y - top))
         
