@@ -72,7 +72,6 @@ class PuzzleGame :
         top = topArr[0][1]
         for x,y in arr :
             result.append((x-left, y - top))
-        
         return sorted(result)
 
     def rotate90(self, arr) :
