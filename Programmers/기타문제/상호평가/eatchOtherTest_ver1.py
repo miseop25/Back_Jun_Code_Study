@@ -49,6 +49,7 @@ class ScocreBoard :
             scArr = []
             for j in range(len(self.scores)) :
                 scArr.append(self.scores[j][i])
+                
             score = self.getAverge(scArr, i) 
             self.answer += self.getGrade(score)
         return self.answer      
