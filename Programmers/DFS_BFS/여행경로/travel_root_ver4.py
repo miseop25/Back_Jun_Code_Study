@@ -1,6 +1,8 @@
 
 class Travel :
-    def __init__(self, ti)
+    def __init__(self, tickets) :
+        self.ticket = tickets
+        
 
 def solution(tickets):
     answer = []
