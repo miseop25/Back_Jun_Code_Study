@@ -58,8 +58,6 @@ class Travel :
         return self.answerList[0]
 
 
-        
-
 def solution(tickets):
     answer = []
     t = Travel(tickets)
