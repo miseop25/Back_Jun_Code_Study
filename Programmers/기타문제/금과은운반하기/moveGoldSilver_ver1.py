@@ -8,7 +8,6 @@ class CityInfo :
         self.canMoveSilver = w if s >= w else s
     
 
-
 class MoveGlodSilver :
     def __init__(self,a,b,g,s,w,t):
         self.gold = a
