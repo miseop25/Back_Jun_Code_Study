@@ -84,7 +84,6 @@ class LightCycle :
             elif cmd == "R" :
                 self.cmdR(cInfo)
         
-
     def makeAnswer(self) :
         for i in range(self.yLen)  :
             for j in range(self.xLen) :
