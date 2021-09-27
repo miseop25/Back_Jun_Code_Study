@@ -97,6 +97,7 @@ class LightCycle :
         self.answer = sorted(self.answer)
         return self.answer
 
+
 def solution(grid):
     answer = []
     lc = LightCycle(grid)
