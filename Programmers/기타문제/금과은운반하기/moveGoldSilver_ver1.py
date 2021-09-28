@@ -6,7 +6,6 @@ class CityInfo :
         self.cTime = t
         self.canMoveGold = w if g >= w else g
         self.canMoveSilver = w if s >= w else s
-    
 
 class MoveGlodSilver :
     def __init__(self,a,b,g,s,w,t):
