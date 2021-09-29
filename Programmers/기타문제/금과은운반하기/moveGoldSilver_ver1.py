@@ -11,7 +11,6 @@ class MoveGlodSilver :
     def __init__(self,a,b,g,s,w,t):
         self.gold = a
         self.silver = b
-
         self.cityDict = dict()
         self.makeCityDict(g,s,w,t)
     
