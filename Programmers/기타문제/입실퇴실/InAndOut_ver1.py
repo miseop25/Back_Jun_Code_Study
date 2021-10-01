@@ -26,7 +26,6 @@ class InAndOut :
                 self.nDict[n] = newNum
             self.ansDict[target] = self.nDict[target]
             del self.nDict[target]
-        
         answer = []
         for i in range(1, (self.totalLen) + 1) :
             answer.append(self.ansDict[i].cnt)
