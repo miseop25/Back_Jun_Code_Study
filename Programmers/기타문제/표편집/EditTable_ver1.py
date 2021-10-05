@@ -1,5 +1,3 @@
-from collections import deque
-
 class CellInfo :
     def __init__(self, num):
         self.myNum = num
@@ -11,7 +9,6 @@ class Table :
         self.n = n
         self.curTable = k
         self.cmds = cmd 
-
         self.tableDict = dict()
         self.delTable =[]
         self.makeTableList()
@@ -48,9 +45,6 @@ class Table :
             self.curTable = nextCell
         else :
             self.curTable = preCell
-        
-        if preCell == -1 and nextCell == -1 :
-            self.curTable = -1
     
     def undoCmd(self) :
         if not self.delTable :
@@ -61,8 +55,7 @@ class Table :
             self.tableDict[undoCmd.pre].next = undoCmd.myNum
         if undoCmd.next != -1 :
             self.tableDict[undoCmd.next].pre = undoCmd.myNum 
-        if self.curTable == -1 :
-            self.curTable =undoCmd.myNum
+
 
     def doCmd(self) :
         for c in self.cmds :
