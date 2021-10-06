@@ -21,22 +21,25 @@ class Table :
                 self.tableDict[i].pre = i-1
     
     def moveCell(self,cmd, cnt) :
-        while cnt > 0 :
+        # while cnt > 0 :
+        for _ in range(cnt) :
+            now = self.tableDict[self.curTable]
             if cmd == "D" :
-                if self.tableDict[self.curTable].next == -1 :
+                if now.next == -1 :
                     return
-                self.curTable = self.tableDict[self.curTable].next
+                self.curTable = now.next
                 cnt -= 1
             elif cmd == "U" :
-                if self.tableDict[self.curTable].pre == -1 :
+                if now.pre == -1 :
                     return
-                self.curTable = self.tableDict[self.curTable].pre
+                self.curTable = now.pre
                 cnt -= 1
             
     def delectCell(self) :
         preCell = self.tableDict[self.curTable].pre
         nextCell = self.tableDict[self.curTable].next
-        self.delTable.append(self.tableDict[self.curTable])
+        # self.delTable.append(self.tableDict[self.curTable])
+        self.delTable.append(self.curTable)
 
         if preCell != -1 :
             self.tableDict[preCell].next = nextCell
@@ -49,12 +52,12 @@ class Table :
     def undoCmd(self) :
         if not self.delTable :
             return
-        undoCmd = self.delTable.pop()
-
-        if undoCmd.pre != -1 :
-            self.tableDict[undoCmd.pre].next = undoCmd.myNum
-        if undoCmd.next != -1 :
-            self.tableDict[undoCmd.next].pre = undoCmd.myNum 
+        uc = self.delTable.pop()
+        uCell = self.tableDict[uc]
+        if uCell.pre != -1 :
+            self.tableDict[uCell.pre].next = uCell.myNum
+        if uCell.next != -1 :
+            self.tableDict[uCell.next].pre = uCell.myNum 
 
 
     def doCmd(self) :
@@ -65,7 +68,7 @@ class Table :
                 cmd, cnt = c.split(" ")
             else :
                 cmd = c 
-            
+
             if cmd == "C" :
                 self.delectCell()
             elif cmd == "Z" :
@@ -78,8 +81,8 @@ class Table :
         answer = ''
         while self.delTable :
             d = self.delTable.pop()
-            if d.myNum in self.tableDict :
-                del self.tableDict[d.myNum]
+            if d in self.tableDict :
+                del self.tableDict[d]
         for i in range(self.n) :
             if i in self.tableDict :
                 answer += "O"
