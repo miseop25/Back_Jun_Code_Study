@@ -55,8 +55,10 @@ class Table :
         uc = self.delTable.pop()
         uCell = self.tableDict[uc]
         if uCell.pre != -1 :
+            nextCell = self.tableDict[uCell.pre].next    
             self.tableDict[uCell.pre].next = uCell.myNum
-        if uCell.next != -1 :
+            self.tableDict[uc].next = nextCell
+        if self.tableDict[uc].next != -1 :
             self.tableDict[uCell.next].pre = uCell.myNum 
 
 
