@@ -1,5 +1,4 @@
 import math
-
 class PersonInfo :
     def __init__(self, name):
         self.child = set()
