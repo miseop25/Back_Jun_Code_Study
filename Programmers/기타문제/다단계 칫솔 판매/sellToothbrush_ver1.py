@@ -5,7 +5,6 @@ class PersonInfo :
         self.name = name
         self.parent = ""
         self.price = 0
-        self.pArr = []
 
 class MainTree :
     def __init__(self, enroll, referral, seller, amount):
