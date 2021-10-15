@@ -14,7 +14,6 @@ class MainTree :
         self.amount = amount 
 
         self.center = PersonInfo("Center")
-
         self.personDict = dict()
         self.answer = []
 
