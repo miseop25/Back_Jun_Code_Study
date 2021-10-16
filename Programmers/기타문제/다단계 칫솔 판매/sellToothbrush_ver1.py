@@ -17,7 +17,6 @@ class MainTree :
         self.personDict = dict()
         self.answer = []
 
-    
     def makePersonDict(self) :
         for p in self.enroll :
             self.personDict[p] = PersonInfo(p)
