@@ -30,11 +30,11 @@ class Soluction :
             else :
                 self.preFixA.append(temp + self.preFixA[i-1])
             
-            self.getADictInfo(i,0)
+            self.getADictInfo(0, i)
 
         st = 1
         ed = self.a
-        for i in range(self.a // 2 + 1) :
+        for i in range(self.a // 2 ) :
             temp = self.preFixA[-1] + self.aArr[i]
             self.preFixA.append(temp)
             self.getADictInfo(st + i,ed + i)
@@ -53,12 +53,12 @@ class Soluction :
                 self.preFixB.append(temp)
             else :
                 self.preFixB.append(temp + self.preFixB[i-1])
-            self.getBDictInfo(i,0)
+            self.getBDictInfo(0, i)
 
         st = 1
         ed = self.b
 
-        for i in range(self.b // 2 + 1) :
+        for i in range(self.b // 2 ) :
             temp = self.preFixB[-1] + self.bArr[i]
             self.preFixB.append(temp)
             self.getBDictInfo(st + i,ed + i)
