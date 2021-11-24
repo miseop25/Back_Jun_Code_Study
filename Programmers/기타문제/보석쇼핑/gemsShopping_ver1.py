@@ -25,7 +25,7 @@ def solution(gems):
                 m_len -= 1
             i += 1
 
-        if m_len == g_len :
+        if len(myGems) == g_len :
             flag = False
             answer.append([i+1,j])
         else :
