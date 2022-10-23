@@ -25,10 +25,6 @@ func bubbleSort(arr: Array<Int>) -> Array<Int> {
     return temp
 }
 
-//var arr =  readLine()!.components(separatedBy: " ").map({ (value) in Int(value)! })
-//let answer = bubbleSort(arr: arr)
 
-let s = BackJoon1152()
-s.signInput()
-print(s.getAnswer())
-
+let mr = MeetingRoom()
+print(mr.getAnswer())

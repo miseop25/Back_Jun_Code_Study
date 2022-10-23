@@ -3,4 +3,100 @@
    uuid = "9AEE8239-EC2A-4592-BCFA-5067451DC7D7"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "252DFB91-F1AC-4D5C-A8CB-EC31302BC63B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Algorithm_Syudy/back_joon_2980.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "252DFB91-F1AC-4D5C-A8CB-EC31302BC63B - a643ad80c5da191a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Algorithm_Syudy.BackJoon2980.deinit"
+                  moduleName = "Algorithm_Syudy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minseopkim/Documents/GitHub/Back_Jun_Code_Study/Algorithm_Syudy/Algorithm_Syudy/back_joon_2980.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "252DFB91-F1AC-4D5C-A8CB-EC31302BC63B - 74a32095b5d0d8a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Algorithm_Syudy.BackJoon2980.__deallocating_deinit"
+                  moduleName = "Algorithm_Syudy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minseopkim/Documents/GitHub/Back_Jun_Code_Study/Algorithm_Syudy/Algorithm_Syudy/back_joon_2980.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "252DFB91-F1AC-4D5C-A8CB-EC31302BC63B - bbdae11f35340c6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Algorithm_Syudy.BackJoon2980.__allocating_init() -&gt; Algorithm_Syudy.BackJoon2980"
+                  moduleName = "Algorithm_Syudy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minseopkim/Documents/GitHub/Back_Jun_Code_Study/Algorithm_Syudy/Algorithm_Syudy/back_joon_2980.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "252DFB91-F1AC-4D5C-A8CB-EC31302BC63B - c38ef42f4e5c4776"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Algorithm_Syudy.BackJoon2980.init() -&gt; Algorithm_Syudy.BackJoon2980"
+                  moduleName = "Algorithm_Syudy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minseopkim/Documents/GitHub/Back_Jun_Code_Study/Algorithm_Syudy/Algorithm_Syudy/back_joon_2980.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5070A476-E70D-40CC-B0E1-21F3241B0FE8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Algorithm_Syudy/DiskController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "makeAnswer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
